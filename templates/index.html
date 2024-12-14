@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+
+<!doctype html>
 {% load static %}
 <html lang="en">
+
 
 <head>
 
@@ -10,39 +12,50 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block title %}Cambiar titulo{% endblock %}</title>
+    <title>{% block title %}Sistema de Reservas{% endblock %}</title>
+    
 
-    <!-- Custom fonts for this template-->
-    <link href="{% static "vendor/fontawesome-free/css/all.min.css" %}" rel="stylesheet" type="text/css">
+    
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="{% static "css/sb-admin-2.min.css"%}" rel="stylesheet">
+    
+    <link href="{% static 'css/sb-admin-2.min.css' %}" rel="stylesheet">
 
 </head>
 <body>
-    
-    
-    <div class="container-fluid text-center">
-        <h1>Sistema de Reservas</h1>
-        <a href="{% url 'detalle_reserva' pk=1 %}" class="btn btn-facebook">Ir a reservas</a><br>
-        <a href="{% url 'admin:index' %}" class="btn btn-danger">Ir a admin</a><br>
-        <a href="{% url 'lista_reservas' %}" class="btn btn-info">Ir a api reservas</a><br>
-        <a href="{% url 'detalle_reserva_html' pk=1 %}" class="btn btn-dark">Ir a detalles de reserva</a><br>
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4 text-primary"><i class="bi bi-building-fill-check"></i> DJ Sistema de Reservas</h1>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-12 mb-3">
+                <a href="{% url 'detalle_reserva' pk=1 %}" class="btn btn-info btn-block py-3">Ir a Reservas</a>
+            </div>
+            <div class="col-12 mb-3">
+                <a href="{% url 'admin:index' %}" class="btn btn-warning btn-block py-3">Ir a Admin</a>
+            </div>
+            <div class="col-12 mb-3">
+                <a href="{% url 'lista_reservas' %}" class="btn btn-primary btn-block py-3">Ir a API Reservas</a>
+            </div>
+            <div class="col-12">
+                <a href="{% url 'detalle_reserva_html' pk=1 %}" class="btn btn-dark btn-block py-3">Ir a Detalles de Reserva</a>
+            </div>
+        </div>
     </div>
+
     
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
+    
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="{% static "vendor/jquery/jquery.min.js"%}"></script>
-    <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js"%}"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="{% static "vendor/jquery-easing/jquery.easing.min.js"%}"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="{% static "js/sb-admin-2.min.js"%}"></script>
+    
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 </body>
 </html>
+
