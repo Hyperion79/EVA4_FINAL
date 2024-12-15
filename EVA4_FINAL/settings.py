@@ -82,9 +82,9 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'edjango_Reservas',
+        'NAME': 'reservas',
         'USER': 'root',
-        'PASSWORD': ''
+        'PASSWORD': 'YO.7531.kurumi'
 
     }
 }
